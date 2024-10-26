@@ -61,3 +61,17 @@ if flnm.split(".")[-1] == "msp":
 	os.system(f"chmod +x {flnm} && ./{flnm}")
 else:
     os.system(f"python3 {flnm}")
+
+
+import time
+
+# Texto que quieres mostrar letra por letra
+texto = "Hola, esto es un mensaje que se va escribiendo cada 5 minutos."
+
+# Intervalo en segundos (5 minutos)
+intervalo = 5 * 60
+
+# Bucle para escribir una letra cada 5 minutos
+for letra in texto:
+    print(letra, end='', flush=True)  # Imprime la letra sin salto de línea
+    time.sleep(intervalo)  # Espera 5 minutos antes de continuar
